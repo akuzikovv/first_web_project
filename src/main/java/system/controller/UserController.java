@@ -19,6 +19,7 @@ public class UserController {
 
     @RequestMapping(value = "/list" , method = RequestMethod.GET)
     public  @ResponseBody  List<User> getAllUsers(){
+
         return userService.getAllUsers();
     }
 
@@ -27,7 +28,7 @@ public class UserController {
     public ModelAndView validateUser(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userFromServer", new User());
-        modelAndView.setViewName("users_check_page");
+        modelAndView.setViewName("users_page");
         return modelAndView;
     }
 
