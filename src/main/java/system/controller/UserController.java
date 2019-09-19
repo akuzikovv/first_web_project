@@ -19,7 +19,6 @@ public class UserController {
 
     @RequestMapping(value = "/list" , method = RequestMethod.GET)
     public  @ResponseBody  List<User> getAllUsers(){
-
         return userService.getAllUsers();
     }
 
@@ -28,8 +27,14 @@ public class UserController {
     public ModelAndView validateUser(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userFromServer", new User());
-        modelAndView.setViewName("users_page");
+        modelAndView.setViewName("users_check_page");
         return modelAndView;
+    }
+
+    @RequestMapping(value = "/add_user" , method = RequestMethod.POST)
+    public @ResponseBody  List addUser(@ModelAttribute("userFromServer") User user){
+        userService.addNewUser(user);
+        return userService.getAllUsers();
     }
 
     @RequestMapping(value = "/check", method = RequestMethod.POST)

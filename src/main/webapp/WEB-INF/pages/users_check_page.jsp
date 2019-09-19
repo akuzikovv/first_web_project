@@ -18,6 +18,24 @@
 <body>
 <h1>
 
+    <spring:form modelAttribute="userFromServer" method="post" action="/user-system/users/list">
+        <spring:label path="name">Name</spring:label>
+        <spring:textarea path="name"/>
+        <spring:label path="password">password</spring:label>
+        <spring:textarea path="password"/>
+        <spring:button>Add user</spring:button>
+    </spring:form>
+
+    <spring:form modelAttribute="userFromServer" method="post" action="/user-system/users/add_user">
+        <spring:label path="name">Name</spring:label>
+        <spring:input path="name"/>
+        <spring:label path="password">password</spring:label>
+        <spring:input path="password"/>
+        <spring:button>Add user</spring:button>
+    </spring:form>
+
+
+    <form:label path="name">Check User</form:label></td>
 <spring:form modelAttribute="userFromServer" method="post" action="/user-system/users/check">
     <spring:input path="name"/>
     <spring:input path="password"/>
