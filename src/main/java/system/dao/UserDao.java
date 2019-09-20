@@ -10,17 +10,15 @@ import java.util.List;
 @Repository
 public class UserDao {
 
-      private ArrayList user_list = new ArrayList();
+      public ArrayList user_list = new ArrayList();
 
-    public List<User> getAllUsers(){
-        user_list.get(0);
+    public List<User> getAllUsers() {
         return user_list;
     }
 
+
     public List<User> addNewUser(User user){
-
         user_list.add(user);
-
         return user_list;
     }
 }

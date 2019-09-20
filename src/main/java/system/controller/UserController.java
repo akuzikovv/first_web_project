@@ -5,9 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+import system.dao.UserDao;
 import system.model.User;
 import system.service.UserService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -18,8 +21,11 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/list" , method = RequestMethod.GET)
-    public  @ResponseBody  List<User> getAllUsers(){
-        return userService.getAllUsers();
+    public  @ResponseBody ArrayList getAllUsers(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("UserDao", UserDao.class);
+        modelAndView.setViewName("users_view_page");
+        return (ArrayList) userService.getAllUsers();
     }
 
 
