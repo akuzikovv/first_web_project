@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import system.dao.UserDao;
 import system.model.User;
 import system.service.UserService;
@@ -29,12 +30,14 @@ public class UserController {
     }
 
 
+
     @RequestMapping(value = "/validate" , method = RequestMethod.GET)
     public ModelAndView validateUser(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("userFromServer", new User());
         modelAndView.setViewName("users_check_page");
         return modelAndView;
+
     }
 
     @RequestMapping(value = "/add_user" , method = RequestMethod.POST)

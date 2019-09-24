@@ -19,4 +19,6 @@ public class UserService {
     public List<User> addNewUser(User user){
         return userDao.addNewUser(user);
     }
+
+
 }

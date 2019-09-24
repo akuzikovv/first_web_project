@@ -6,6 +6,11 @@
 
     <mvc:annotation-driven/>
 
+    <mvc:resources mapping="/css/**" location="resources/css/" />
+    <mvc:resources mapping="/Images/**" location="resources/Images/" />
+    <!--<mvc:resources mapping="/js/**" location="/WEB-INF/js/" />-->
+
+
     <context:component-scan base-package="system"/>
 
     <mvc:view-controller path="/" view-name="users_check_page"/>
@@ -14,4 +19,23 @@
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <bean id="resolver2" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages"/>
+        <property name="suffix" value=".css"/>
+    </bean>
+
+    <bean id="forward" class="org.springframework.web.servlet.mvc.ServletForwardingController">
+        <property name="servletName" value="default" />
+    </bean>
+
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <value>
+                /images/**=forward
+            </value>
+        </property>
+    </bean>
+
+
 </beans>
