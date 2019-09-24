@@ -21,7 +21,7 @@
     </style>
 
 
-    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" value="/css/style.css"/>--%>
+    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" />--%>
 
 
     <img class="rg_ic rg_i" id="ycUvICtKTwuDpM:" jsaction="load:str.tbn" alt="Картинки по запросу mem"
