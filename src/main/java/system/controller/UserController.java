@@ -3,6 +3,8 @@ package system.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
@@ -28,6 +30,29 @@ public class UserController {
         modelAndView.setViewName("users_view_page");
         return (ArrayList) userService.getAllUsers();
     }
+
+    @RequestMapping("/hello")
+    public String display(HttpServletRequest req,Model m)
+    {
+        //read the provided form data
+        String name=req.getParameter("name");
+        String pass=req.getParameter("pass");
+        if(pass.equals("admin"))
+        {
+            String msg="Hello "+ name;
+            //add a message to the model
+            m.addAttribute("message", msg);
+            return "viewpage";
+        }
+        else
+        {
+            String msg="Sorry "+ name+". You entered an incorrect password";
+            m.addAttribute("message", msg);
+            return "errorpage";
+        }
+    }
+
+
 
 
 

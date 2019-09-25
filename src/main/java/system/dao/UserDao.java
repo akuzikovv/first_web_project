@@ -4,15 +4,15 @@ import org.springframework.stereotype.Repository;
 import system.model.User;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Repository
 public class UserDao {
 
       public ArrayList user_list = new ArrayList();
+    private String getAllUsers;
 
-    public List<User> getAllUsers() {
+    public ArrayList getAllUsers() {
         return user_list;
     }
 
@@ -21,4 +21,7 @@ public class UserDao {
         user_list.add(user);
         return user_list;
     }
+
+
+
 }

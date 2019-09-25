@@ -11,18 +11,22 @@
 
 
     <style>
-        body { background-image: url(/WEB-INF/Images/derev.jpg); }
+        <%@include file='/resources/css/style.css' %>
     </style>
 </head>
 <body>
 
 
 
+
+
+<spring:form modelAttribute="UserDao" method="get" action="/user-system/users/list">
+    <table aria-colcount="2" pa
+</spring:form>
+
+
 <h1>
-    <spring:form modelAttribute="UserDao" method="get" action="/user-system/users/list?">
-        <spring:button>Show users</spring:button>
-        <spring:select path=""/>
-    </spring:form>
+
 </h1>
 
 

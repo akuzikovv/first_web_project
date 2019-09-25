@@ -35,10 +35,7 @@
 
 
 <h1>
-
-
-
-    <spring:form modelAttribute="userFromServer" method="get" action="/user-system/users/list">
+        <spring:form modelAttribute="userFromServer" method="get" action="/user-system/users/list">
         <spring:button>Show users</spring:button>
         <%--<spring:select path="getAllUsers"/>--%>
     </spring:form>

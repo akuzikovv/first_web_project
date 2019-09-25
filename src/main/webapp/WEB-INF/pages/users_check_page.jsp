@@ -32,13 +32,15 @@
 </head>
 <body>
 
+<form action="hello">
+    UserName : <input type="text" name="name"/> <br><br>
+    Password : <input type="text" name="pass"/> <br><br>
+    <input type="submit" name="submit">
 
 
-<h1>
 
-
-
-    <spring:form modelAttribute="userFromServer" method="get" action="/user-system/users/list">
+    <h1>
+        <spring:form modelAttribute="userFromServer" method="get" action="/user-system/users/list">
         <spring:button>Show users</spring:button>
         <%--<spring:select path="getAllUsers"/>--%>
     </spring:form>
