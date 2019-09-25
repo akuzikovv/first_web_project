@@ -20,6 +20,11 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean id="resolver3" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/resources/Images"/>
+        <property name="suffix" value=".jpg"/>
+    </bean>
+
     <bean id="resolver2" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages"/>
         <property name="suffix" value=".css"/>
