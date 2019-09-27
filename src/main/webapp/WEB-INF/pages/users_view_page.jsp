@@ -1,5 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 
 <head>
@@ -15,22 +16,34 @@
     </style>
 </head>
 <body>
+<form action="/users/list">
 
 
 
+    <form action="/users/list">
+
+First Name : ${All_users}
+    </form>
 
 
-<spring:form modelAttribute="UserDao" method="get" action="/user-system/users/list">
-    <table aria-colcount="2" pa
-</spring:form>
+
+    <%--<table>--%>
+        <%--<tr>--%>
+            <%--<th>name</th>--%>
+            <%--<th>password</th>--%>
+
+
+        <%--</tr>--%>
+    <%--</table>--%>
 
 
 <h1>
 
 </h1>
 
-
+</form>
 
 
 </body>
+
 </html>

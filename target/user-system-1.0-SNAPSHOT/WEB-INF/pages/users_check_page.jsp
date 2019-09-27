@@ -33,8 +33,7 @@
 <body>
 
 
-
-<h1>
+    <h1>
         <spring:form modelAttribute="userFromServer" method="get" action="/user-system/users/list">
         <spring:button>Show users</spring:button>
         <%--<spring:select path="getAllUsers"/>--%>
@@ -42,7 +41,7 @@
 </h1>
 
 <h2>
-    <spring:form modelAttribute="userFromServer" method="post" action="/user-system/users/add_user">
+    <spring:form modelAttribute="userFromServer" method="post" value="/user-system/users/add_user">
         <spring:label path="name">Name</spring:label>
         <spring:input path="name"/>
         <spring:label path="password">password</spring:label>

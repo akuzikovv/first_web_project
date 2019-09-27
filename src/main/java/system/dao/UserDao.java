@@ -10,7 +10,6 @@ import java.util.List;
 public class UserDao {
 
       public ArrayList user_list = new ArrayList();
-    private String getAllUsers;
 
     public ArrayList getAllUsers() {
         return user_list;
