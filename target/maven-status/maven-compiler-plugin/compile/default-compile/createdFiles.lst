@@ -1,5 +1,3 @@
-system/dao/UserDao.class
-system/model/User.class
 com/firstwebproject/database/Main.class
-system/controller/UserController.class
+system/model/User.class
 system/service/UserService.class
